@@ -1,0 +1,25 @@
+{
+  "name": "supreme-octo-telegram",
+  "version": "1.0.0",
+  "description": "Discord verification startup audit bot",
+  "type": "module",
+  "main": "index.js",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "NODE_DEBUG=http,net,tls node index.js",
+    "dev": "NODE_DEBUG=http,net,tls nodemon --watch src --exec node index.js",
+    "deploy": "node ./scripts/deploy-commands.js",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.2",
+    "discord.js": "^14.17.0",
+    "ws": "^8.14.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "nodemon": "^3.0.2"
+  }
+}
